@@ -8,6 +8,8 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
+        buildConfigField 'String', 'BASE_URL', "\"https://api.punkapi.com/v2/\""
+
         applicationId "de.jky.punknanogiants"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
@@ -27,6 +29,7 @@ android {
         viewBinding true
         dataBinding true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -86,6 +89,12 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.httplogging_version"
+    implementation "com.google.code.gson:gson:2.8.9"
 
     //Test
     testImplementation 'junit:junit:4.13.2'
