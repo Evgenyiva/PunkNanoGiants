@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="de.jky.punknanogiants.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_punkListViewFragment"
+            app:destination="@id/punkListViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/punkListViewFragment"
+        android:name="de.jky.punknanogiants.ui.punkListView.PunkListViewFragment"
+        android:label="fragment_punk_list_view"
+        tools:layout="@layout/fragment_punk_list_view" >
+        <action
+            android:id="@+id/action_punkListViewFragment_to_punkDetailsView"
+            app:destination="@id/punkDetailsView" />
+    </fragment>
+    <fragment
+        android:id="@+id/punkDetailsView"
+        android:name="de.jky.punknanogiants.ui.punkDetailsView.PunkDetailsView"
+        android:label="fragment_punk_details_view"
+        tools:layout="@layout/fragment_punk_details_view" />
+</navigation>
