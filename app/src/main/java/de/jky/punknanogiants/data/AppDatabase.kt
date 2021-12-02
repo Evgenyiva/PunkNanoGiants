@@ -13,7 +13,7 @@ import de.jky.punknanogiants.data.beer.RequestConverters
     entities = [
         BeerEntity::class
     ],
-    version = 1
+    version = 2
 )
 
 @TypeConverters(RequestConverters::class)
@@ -32,6 +32,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun buildDatabase(context: Context): AppDatabase {
             return Room.databaseBuilder(context, AppDatabase::class.java, "database.db")
+                .fallbackToDestructiveMigration()
                 .build()
         }
     }

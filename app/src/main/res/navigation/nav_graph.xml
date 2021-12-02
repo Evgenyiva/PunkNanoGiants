@@ -25,7 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/punkDetailsView"
-        android:name="de.jky.punknanogiants.ui.punkDetailsView.PunkDetailsView"
+        android:name="de.jky.punknanogiants.ui.punkDetailsView.PunkDetailsViewFragment"
         android:label="fragment_punk_details_view"
-        tools:layout="@layout/fragment_punk_details_view" />
+        tools:layout="@layout/fragment_punk_details_view" >
+        <argument
+            android:name="beerId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
 </navigation>

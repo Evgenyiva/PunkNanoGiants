@@ -11,28 +11,28 @@ data class BeerEntity(
     val id: Long,
     val name: String?,
     val tagline: String?,
-    val firstBrewed: String?,
+    val first_brewed: String?,
     val description: String?,
-    val imageURL: String?,
+    val image_url: String?,
     val abv: Double?,
     val ibu: Double?,
-    val targetFg: Double?,
-    val targetOg: Double?,
+    val target_fg: Double?,
+    val target_og: Double?,
     val ebc: Double?,
     val srm: Double?,
     val ph: Double?,
-    val attenuationLevel: Double?,
+    val attenuation_level: Double?,
     @Embedded(prefix = "volume_")
     val volume: Volume,
     @Embedded(prefix = "boilVolume_")
-    val boilVolume: Volume?,
+    val boil_volume: Volume?,
     @Embedded
     val method: Method?,
     @Embedded
     val ingredients: Ingredients?,
-    val foodPairings: List<String>?,
-    val brewersTips: String?,
-    val contributedBy: String?
+    val food_pairings: List<String>?,
+    val brewers_tips: String?,
+    val contributed_by: String?
 )
 
 data class Volume(

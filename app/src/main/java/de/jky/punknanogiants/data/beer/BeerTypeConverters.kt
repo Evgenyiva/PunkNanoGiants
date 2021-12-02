@@ -11,6 +11,7 @@ class RequestConverters {
     private val typeTokenListOfStings = object : TypeToken<List<String?>?>() {}.type
     private val typeTokenListOfMash = object : TypeToken<List<MashTemp?>?>() {}.type
     private val typeTokenListOfMalt = object : TypeToken<List<Malt?>?>() {}.type
+    private val typeTokenListOfHop = object : TypeToken<List<Hop?>?>() {}.type
 
     @TypeConverter
     fun listStringToJsonStr(listMyModel: List<String>?): String? {
@@ -28,7 +29,7 @@ class RequestConverters {
     }
 
     @TypeConverter
-    fun jsonMashToListString(jsonStr: String?): List<MashTemp>? {
+    fun jsonStrToListMash(jsonStr: String?): List<MashTemp>? {
         return jsonStr?.let { gson.fromJson(jsonStr, typeTokenListOfMash) }
     }
 
@@ -38,7 +39,7 @@ class RequestConverters {
     }
 
     @TypeConverter
-    fun jsonMaltToListString(jsonStr: String?): List<Malt>? {
+    fun jsonStrToListMalt(jsonStr: String?): List<Malt>? {
         return jsonStr?.let { gson.fromJson(jsonStr, typeTokenListOfMalt) }
     }
 
@@ -48,9 +49,9 @@ class RequestConverters {
     }
 
     @TypeConverter
-    fun jsonHopToListString(jsonStr: String?): List<Hop>? {
+    fun jsonStrToListHop(jsonStr: String?): List<Hop>? {
         return jsonStr?.let {
-            gson.fromJson(jsonStr, typeTokenListOfStings)
+            gson.fromJson(jsonStr, typeTokenListOfHop)
         }
     }
 }

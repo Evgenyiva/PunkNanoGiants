@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightGrey">#FFCCCCCC</color>
     <color name="application_bg">#19194A</color>
-    <color name="textColor">@color/lightGrey</color>
+    <color name="textColor">@color/white</color>
+    <color name="highlight">#FFD80855</color>
+    <color name="lightblue">#FF43447c</color>
 </resources>

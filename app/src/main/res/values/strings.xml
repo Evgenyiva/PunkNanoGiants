@@ -3,4 +3,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loading">loading...</string>
+    <string name="beer_image">Beer Image</string>
+    <string name="unknown">unknown</string>
+    <string name="volume">Volume</string>
+    <string name="boil_volume">Boil volume</string>
+    <string name="first_brewed">First brewed</string>
+    <string name="description">Description</string>
+    <string name="hops">Hops</string>
+    <string name="malt">Malt</string>
+    <string name="food_pairing">Food Pairing</string>
+    <string name="get_more">Get More</string>
+    <string name="logo">logo</string>
 </resources>
